@@ -11,7 +11,6 @@ const resetBtn = document.getElementById("resetBtn");
 
 const progressBar = document.getElementById("progressBar");
 const historyList = document.getElementById("historyList");
-
 // Timer state variables
 let timerInterval = null;
 let isRunning = false;
@@ -19,31 +18,26 @@ let isPaused = false;
 let currentMode = "focus"; // focus | break
 let totalSeconds = 0;
 let remainingSeconds = 0;
-
 // Local storage keys
 const HISTORY_KEY = "pomodoro_history";
 const DATE_KEY = "pomodoro_current_date";
 
 // Initial App Load
 initializeApp();
-
 // Event Listeners
 startBtn.addEventListener("click", startTimer);
 pauseBtn.addEventListener("click", pauseTimer);
 resumeBtn.addEventListener("click", resumeTimer);
 resetBtn.addEventListener("click", resetTimer);
-
 // Live update of time before start
 focusInput.addEventListener("input", handleInputChange);
 breakInput.addEventListener("input", handleInputChange);
-
 // Initilize application
 function initializeApp(){
   resetHistoryIfNewDay();
   loadHistory();
   setFocusSession();
 }
-
 // Handle Input Changes
 function handleInputChange(){
   // Prevent invalid values
@@ -68,7 +62,6 @@ function getFocusSeconds() {
 function getBreakSeconds() {
   return Number(breakInput.value) * 60;
 }
-
 // Validate input
 function validateInputs() {
   if (focusInput.value < 1) {
