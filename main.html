@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pomodoro-Timer</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="title">Pomodoro Timer</h1>
+            <!-- Session Type-->
+            <div class="session-label" id="sessionLabel">Focus Time </div>
+            <!-- Timer -->
+            <div class="timer-display" id="timerDisplay">25:00 </div>
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <!-- Settings -->
+            <div class="settings-container">
+                <div class="setting-box">
+                    <label for="focusInput">Focus Minutes</label>
+                    <input type="number" id="focusInput" min="1" max="180" value="25"/>
+                </div>
+                <div class="setting-box">
+                    <label for="breakInput">Break Minutes</label>
+                    <input type="number" id="breakInput" min="1" max="60" value="5"/>
+                </div>
+            </div>
+            <!-- Buttons -->
+            <div class="button-group">
+                <button id="startBtn" class="btn start-btn">Start</button>
+                <button id="pauseBtn" class="btn pause-btn" disabled>Pause</button>
+                <button id="resumeBtn" class="btn resume-btn" disabled>Resume</button>
+                <button id="resetBtn" class="btn reset-btn">Reset</button>
+            </div>
+            <!-- History -->
+            <div class="history-section">
+                <h2>Completed Focus Sessions</h2>
+                <ul id="historyList" class="history-list">
+                    <!--Dynamic history insertion-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
