@@ -134,7 +134,6 @@ body {
   opacity: 0.7;
   font-style: italic;
 }
-
 @media (max-width: 500px) {
   .timer-display {
     font-size: 3rem;
